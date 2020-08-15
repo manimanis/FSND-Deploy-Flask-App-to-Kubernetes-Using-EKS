@@ -8,19 +8,19 @@ Parameters:
 
   EksClusterName:
     Type: String
-    Description: The name of the EKS cluster created
+    Description: simple-jwt-api
     Default: 
     MinLength: 1
     MaxLength: 100
-    ConstraintDescription: You must enter the EKS cluster name
+    ConstraintDescription: simple-jwt-api
 
   GitSourceRepo:
     Type: String
-    Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
+    Description: https://github.com/manimanis/FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS
     Default: 
     MinLength: 1
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub repository name
+    ConstraintDescription: FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS
 
   GitBranch:
     Type: String
@@ -28,7 +28,7 @@ Parameters:
     Description: GitHub git repository branch - change triggers a new build
     MinLength: 1
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub repository branch name
+    ConstraintDescription: master
 
   GitHubToken:
     Type: String
@@ -36,15 +36,15 @@ Parameters:
     Description: GitHub API token - see https://github.com/blog/1509-personal-api-tokens
     MinLength: 3
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub personal access token
+    ConstraintDescription: 04f0798d076187a2df12291c56342aa3ca6a0657
 
   GitHubUser:
     Type: String
     Default:
-    Description: GitHub username or organization
+    Description: manimanis
     MinLength: 3
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub username or organization
+    ConstraintDescription: manimanis
 
   CodeBuildDockerImage:
     Type: String
@@ -52,7 +52,7 @@ Parameters:
     Description: Default AWS CodeBuild Docker optimized image
     MinLength: 3
     MaxLength: 100
-    ConstraintDescription: You must enter a CodeBuild Docker image
+    ConstraintDescription: Simple-JWT-API
 
   KubectlRoleName:
     Type: String
@@ -60,7 +60,7 @@ Parameters:
     Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
     MaxLength: 100
-    ConstraintDescription: You must enter a kubectl IAM role
+    ConstraintDescription: Simple-JWT-API
 
 
 Metadata:
